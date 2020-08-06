@@ -17,7 +17,7 @@ This Project
 3. LiveData 
 
 
-[Check out Mindorks awesome open source projects here](https://mindorks.com/open-source-projects)
+
 
 ### License
 ```
