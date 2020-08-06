@@ -32,6 +32,7 @@ This repository contains a detailed sample app that implements MVVM architecture
 <br>
 
 # Video file
+<video src="media\20200806_112643.mp4" width="320" height="200" controls preload></video>
 <a href="media\20200806_112643.mp4">Todo APK </a>
 
 # APK File
