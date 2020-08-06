@@ -13,8 +13,8 @@ This Project
 
 ### Library reference resources:
 1. Room: https://developer.android.com/topic/libraries/architecture/room.html
-2 SimpleSearchView : https://github.com/Ferfalk/SimpleSearchView
-3 LiveData 
+2. SimpleSearchView : https://github.com/Ferfalk/SimpleSearchView
+3. LiveData 
 
 
 [Check out Mindorks awesome open source projects here](https://mindorks.com/open-source-projects)
