@@ -40,6 +40,7 @@ public class TodoListAdapter extends RecyclerView.Adapter<TodoListAdapter.ViewHo
     void setData(List<TodoTable> data)
     {
         this.data=data;
+        filterList.clear();
         filterList.addAll(this.data);
         notifyDataSetChanged();
     }
