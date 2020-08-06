@@ -32,7 +32,6 @@ public class TodoListAdapter extends RecyclerView.Adapter<TodoListAdapter.ViewHo
     }
     void resetSearch()
     {
-        Log.e("Reset is Called ", " **********  " );
         filterList.clear();
         filterList.addAll(data);
         notifyDataSetChanged();

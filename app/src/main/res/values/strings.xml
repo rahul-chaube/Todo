@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TodoDemo</string>
+    <string name="app_name">My Todo List</string>
     <string name="content">Enter Content</string>
     <string name="enter_title">Enter Title</string>
 </resources>
