@@ -5,18 +5,39 @@ This Project
 This repository contains a detailed sample app that implements MVVM architecture Room, AndroidDebugDatabase
 <p align="center">
   <img src="media/1.jpg" width="250">
-  <img src="https://janishar.github.io/images/mvp-app-pics/main-view.png" width="250">
-  <img src="https://janishar.github.io/gifs/mvp-app.gif" width="250">
+  <img src="media/2.jpg" width="250">
+  <img src="media/3.jpg" width="250">
 </p>
 <br>
 <p align="center">
-  <img src="https://janishar.github.io/images/mvp-app-pics/mvp-drawer.png" width="200">
-  <img src="https://janishar.github.io/images/mvp-app-pics/mvp-rating.png" width="200">
-  <img src="https://janishar.github.io/images/mvp-app-pics/mvp-feed.png" width="200">
-  <img src="https://janishar.github.io/images/mvp-app-pics/mvp-empty-state.png" width="200">
+  <img src="media/4.jpg" width="250">
+  <img src="media/5.jpg" width="250">
+  <img src="media/6.jpg" width="250">
 </p>
 <br>
 <br>
+
+<p align="center">
+  <img src="media/7.jpg" width="250">
+  <img src="media/8.jpg" width="250">
+  <img src="media/9.jpg" width="250">
+</p>
+<br>
+<br>
+<p align="center">
+  <img src="media/10.jpg" width="250">
+
+</p>
+<br>
+<br>
+
+# Video file
+<a href="media\20200806_112643.mp4">Todo APK </a>
+
+# APK File
+<a href="media\myTodo.apk">Todo APK </a>
+
+
 
 # Android MVVM Architecture: Todo List App
 
