@@ -1,6 +1,7 @@
 package com.rahulchaube.tododemo.ui.todolist;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +15,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.rahulchaube.tododemo.R;
 import com.rahulchaube.tododemo.data.entitiy.TodoTable;
 
+import java.text.Format;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class TodoListAdapter extends RecyclerView.Adapter<TodoListAdapter.ViewHolder> {
@@ -26,23 +30,34 @@ public class TodoListAdapter extends RecyclerView.Adapter<TodoListAdapter.ViewHo
         this.context = context;
         this.listner = listner;
     }
+    void resetSearch()
+    {
+        Log.e("Reset is Called ", " **********  " );
+        filterList.clear();
+        filterList.addAll(data);
+        notifyDataSetChanged();
+    }
 
     void setData(List<TodoTable> data)
     {
         this.data=data;
-        filterList=this.data;
+        filterList.addAll(this.data);
         notifyDataSetChanged();
     }
     void filterString(String string)
     {
+        Log.e("Test Data "," "+data.size());
         filterList.clear();
         for (TodoTable todoTable: data
              ) {
+
+            Log.e("Test is "," "+todoTable.getContent());
             if (todoTable.getContent().toLowerCase().contains(string.toLowerCase()) || todoTable.getTitle().toLowerCase().contains(string.toLowerCase()))
             {
                 filterList.add(todoTable);
             }
         }
+        Log.e("Search Called ",string+" "+filterList.size()+"  "+data.size());
         notifyDataSetChanged();
     }
 
@@ -73,6 +88,19 @@ public class TodoListAdapter extends RecyclerView.Adapter<TodoListAdapter.ViewHo
                 listner.updateEvent(todoTable);
             }
         });
+        Date date = new Date(todoTable.getCreatedTime());
+        Format format = new SimpleDateFormat("dd-MMM-yy");
+        holder.textViewDate.setText(format.format(date));
+        if (todoTable.getStatus()==2)
+        {
+            holder.textViewStatus.setText("Done");
+            holder.cardViewMain.setCardBackgroundColor(context.getResources().getColor(R.color.colorAccent));
+        }
+        else
+        {
+            holder.textViewStatus.setText("Pending");
+            holder.cardViewMain.setCardBackgroundColor(context.getResources().getColor(R.color.white));
+        }
     }
 
     @Override
@@ -82,10 +110,12 @@ public class TodoListAdapter extends RecyclerView.Adapter<TodoListAdapter.ViewHo
 
     class ViewHolder extends RecyclerView.ViewHolder {
         CardView cardViewMain;
-        TextView textViewTitle,textViewContent;
+        TextView textViewTitle,textViewContent,textViewStatus,textViewDate;
         ImageView imageViewDelete;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            textViewDate=itemView.findViewById(R.id.date);
+            textViewStatus=itemView.findViewById(R.id.status);
             cardViewMain=itemView.findViewById(R.id.main);
             textViewTitle=itemView.findViewById(R.id.tv_item_title);
             textViewContent=itemView.findViewById(R.id.tv_item_content);

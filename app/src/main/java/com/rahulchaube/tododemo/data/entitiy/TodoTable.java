@@ -13,12 +13,22 @@ public class TodoTable implements Serializable {
     String title;
     String content;
     int status;
+    long createdTime;
 
-    public TodoTable(long id, String title, String content, int status) {
+    public TodoTable(long id, String title, String content, int status, long createdTime) {
         this.id = id;
         this.title = title;
         this.content = content;
         this.status = status;
+        this.createdTime = createdTime;
+    }
+
+    public long getCreatedTime() {
+        return createdTime;
+    }
+
+    public void setCreatedTime(long createdTime) {
+        this.createdTime = createdTime;
     }
 
     public long getId() {

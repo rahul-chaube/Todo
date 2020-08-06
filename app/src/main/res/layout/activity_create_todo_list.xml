@@ -42,7 +42,19 @@
                 android:hint="Enter Content"
                 android:inputType="textMultiLine|textFilter" />
         </com.google.android.material.textfield.TextInputLayout>
-
+        <LinearLayout
+            android:layout_marginBottom="5dp"
+            android:visibility="gone"
+            android:id="@+id/ll_check"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:textColor="@color/colorAccent"
+                android:id="@+id/taskCompleted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Task Completed"/>
+        </LinearLayout>
     </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

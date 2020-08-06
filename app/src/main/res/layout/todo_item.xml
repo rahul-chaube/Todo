@@ -24,6 +24,7 @@
             android:src="@drawable/ic_baseline_delete_24" />
 
         <LinearLayout
+            android:id="@+id/data"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_toLeftOf="@id/iv_item_delete"
@@ -46,8 +47,44 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:ellipsize="end"
-                android:maxLines="2"
                 tools:text="title" />
+        </LinearLayout>
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/data"
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/textColor"/>
+        <LinearLayout
+            android:id="@+id/ll_status"
+            android:layout_below="@id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="center|start"
+                android:id="@+id/status"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                tools:text="status" />
+
+            <TextView
+                android:gravity="center|end"
+                android:id="@+id/date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                tools:text="Date" />
+
         </LinearLayout>
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
